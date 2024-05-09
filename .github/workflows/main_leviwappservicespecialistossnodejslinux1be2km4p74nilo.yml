@@ -71,7 +71,7 @@ jobs:
 
       - name: set webapp startup
         run: |
-          az webapp config set --resource-group LeviW.AppService.Specialist.OSS.NodejsLinux.1 --name leviwappservicespecialistossnodejslinux1be2km4p74nilo --startup-file "./package.json"
+          az webapp config set --resource-group LeviW.AppService.Specialist.OSS.NodejsLinux.1 --name leviwappservicespecialistossnodejslinux1be2km4p74nilo --startup-file "pm2 serve --no-daemon ./packages/web/build"
 
     # Azure logout
       - name: logout
